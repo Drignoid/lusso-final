@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to shell repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
           publish_dir: ./dist
           external_repository: Drignoid/Drignoid-drignoid.github.io
           publish_branch: main
