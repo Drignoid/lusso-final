@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model AdminUser {
+  id           Int    @id @default(autoincrement())
+  username     String @unique
+  passwordHash String
+}
+
+model AdminLogins {
+  id           Int    @id @default(autoincrement())
+  username     String
+  when         String
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  imageUrl    String
+  description String
+  products    Product[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String @unique
+  description String
+  finish      String?
+  imageUrl    String?  // You can store a URL or file path here
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
