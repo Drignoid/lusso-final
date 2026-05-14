@@ -1,3 +1,4 @@
+// pages/AdminLogin.tsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,32 +9,30 @@ export default function AdminLogin() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSignIn = async (e: SubmitEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError('');
-    
-    try {
-      const res = await fetch('/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
-      });
-      
-      const data = await res.json();
-      
-      if (res.ok) {
-        localStorage.setItem('adminToken', 'true'); // Simple auth persistence
-        navigate('/admin/dashboard');
-      } else {
-        setError(data.error || 'Login failed');
-      }
-    } catch (err) {
-      setError('Connection error');
-    } finally {
-      setLoading(false);
-    }
-  };
+  const handleSignIn = async (e: React.SubmitEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setLoading(true);
+  setError("");
+
+  try {
+    const res = await fetch("/api/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username, password }),
+  });
+
+  if (!res.ok) {
+    throw new Error("Invalid credentials");
+  }
+
+  navigate("/admin/dashboard");
+  } catch (err) {
+    setError("Login failed");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">

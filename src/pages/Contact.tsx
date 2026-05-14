@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useEnquiry } from '../context/EnquiryContext';
-import { Trash2, Send, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
+import { Trash2, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { cn } from '../lib/utils';
 
 export default function Contact() {
   const { enquiryItems, removeFromEnquiry, clearEnquiry } = useEnquiry();

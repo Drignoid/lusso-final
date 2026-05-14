@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Menu, X, User, ShoppingBag } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { cn } from '../lib/utils';
-import { useEnquiry } from '../context/EnquiryContext';
+import { cn } from '@/lib/utils';
+import { useEnquiry } from '@/context/EnquiryContext';
 
 export default function Navbar() {
   const location = useLocation();
