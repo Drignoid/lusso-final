@@ -14,9 +14,9 @@
 	],
 	"d1_databases": [
 		{
-			"binding": "lusso",
-			"database_name": "lusso",
-			"database_id": "3f289939-e06a-4161-9e62-ecd7db6f72cf"
+		"binding": "DB",
+		"database_name": "lusso",
+		"database_id": "3f289939-e06a-4161-9e62-ecd7db6f72cf"
 		}
 	]
 }

@@ -89,7 +89,7 @@ export default function AdminDashboard() {
     }
   };
 
-  const handleAddAdmin = async (e: React.FormEvent) => {
+  const handleAddAdmin = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setAdminStatus(null);
     try {
@@ -127,7 +127,7 @@ export default function AdminDashboard() {
     return data.imageUrl;
   };
 
-  const handleAddCategory = async (e: React.FormEvent) => {
+  const handleAddCategory = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setUploading(true);
     try {
@@ -155,7 +155,7 @@ export default function AdminDashboard() {
     }
   };
 
-  const handleAddProduct = async (e: React.FormEvent) => {
+  const handleAddProduct = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setUploading(true);
     try {

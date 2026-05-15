@@ -31,7 +31,7 @@ export default function Home() {
           </h1>
           <p className="text-lg md:text-xl text-white/80 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
             Elevate your space with our curated collection of high-end architectural elements. 
-            Craftsmanship meets modern sophistication.
+            Our craftsmanship meets modern sophistication.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

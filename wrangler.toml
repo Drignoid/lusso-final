@@ -1,0 +1,21 @@
+name = "lusso-final"
+main = "server.ts"
+compatibility_date = "2026-05-15"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lusso"
+database_id = "3f289939-e06a-4161-9e62-ecd7db6f72cf"
+
+
+# Optional: add environment if you use staging or production
+# [env.production]
+# [[env.production.d1_databases]]
+# binding = "lusso"
+# database_name = "lusso"
+# database_id = "3f289939-e06a-4161-9e62-ecd7db6f72cf"

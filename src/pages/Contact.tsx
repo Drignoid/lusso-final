@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useEnquiry } from '../context/EnquiryContext';
+import { useEnquiry } from '@/context/EnquiryContext';
 import { Trash2, Mail, MapPin, Phone, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -117,7 +117,7 @@ export default function Contact() {
         </div>
 
         {/* Right Side: Enquiry List */}
-        <div className="w-full md:w-7/12 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 flex flex-col min-h-[600px] overflow-hidden">
+        <div className="w-full md:w-7/12 bg-white rounded-3xl border border-gray-100 shadow-xl shadow-gray-100/50 flex flex-col min-h-600px overflow-hidden">
           <div className="p-8 border-b border-gray-50 flex justify-between items-center">
             <div>
               <h2 className="text-2xl font-bold tracking-tight">Your Enquiry List</h2>
@@ -144,7 +144,7 @@ export default function Contact() {
                     exit={{ opacity: 0, x: 20 }}
                     className="bg-white p-4 rounded-2xl border border-gray-100 flex gap-4 items-center group"
                   >
-                    <div className="w-20 h-20 bg-gray-100 rounded-xl overflow-hidden flex-shrink-0">
+                    <div className="w-20 h-20 bg-gray-100 rounded-xl overflow-hidden shrink-0">
                       <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                     </div>
                     <div className="flex-1">
@@ -165,7 +165,7 @@ export default function Contact() {
                     <Mail className="text-gray-200" size={32} />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900">Your list is empty</h3>
-                  <p className="text-sm text-gray-400 mt-2 max-w-[240px]">
+                  <p className="text-sm text-gray-400 mt-2 max-w-60">
                     Browse our collections and add products you're interested in.
                   </p>
                 </div>

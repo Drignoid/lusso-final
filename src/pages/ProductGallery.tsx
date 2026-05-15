@@ -2,8 +2,8 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, Filter, Loader2, X, ShoppingBag, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { useEnquiry } from '../context/EnquiryContext';
-import { cn } from '../lib/utils';
+import { useEnquiry } from '@/context/EnquiryContext';
+import { cn } from '@/lib/utils';
 
 interface Product {
   id: string;
